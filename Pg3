@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+int main() {
+    printf("Solve Hill Cipher using known plaintext attack.\n");
+    return 0;
+}
