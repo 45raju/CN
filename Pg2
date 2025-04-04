@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void monoFrequencyAttack(char *text) {
+    char map[26] = "ETAOINSHRDLCUMWFGYPBVKJXQZ"; 
+    for (int i = 0; text[i]; i++)
+        if (text[i] >= 'A' && text[i] <= 'Z')
+            printf("%c", map[text[i] - 'A']);
+        else
+            printf("%c", text[i]);
+    printf("\n");
+}
+
+int main() {
+    char text[] = "GUVF VF N FRPERG ZRFFNTR";
+    monoFrequencyAttack(text);
+    return 0;
+}
