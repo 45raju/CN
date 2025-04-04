@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int key[2][2] = {{9, 4}, {5, 7}};
+
+void encryptHill(char *text) {
+    for (int i = 0; text[i]; i += 2) {
+        printf("%c%c", ((key[0][0] * (text[i] - 'a') + key[0][1] * (text[i+1] - 'a')) % 26) + 'A',
+                       ((key[1][0] * (text[i] - 'a') + key[1][1] * (text[i+1] - 'a')) % 26) + 'A');
+    }
+    printf("\n");
+}
+
+int main() {
+    char text[] = "meetme";
+    encryptHill(text);
+    return 0;
+}
